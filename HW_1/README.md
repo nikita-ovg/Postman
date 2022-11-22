@@ -8,9 +8,9 @@ Port: 5005
 
 Method: GET
 EndPoint: /get_method
-request url params: 
- name: str
- age: int
+request url params:
+name: str
+age: int
 
 **response:**
 ```sh
@@ -24,10 +24,10 @@ request url params:
 
 Method: POST
 EndPoint: /user_info_3
-request form data: 
- name: str
- age: int
- salary: int
+request form data:
+name: str
+age: int
+salary: int
  
  **response:**
  
@@ -55,10 +55,10 @@ request form data:
 
 Method: GET
 EndPoint: /object_info_1
-request url params: 
- name: str
- age: int
- weight: int
+request url params:
+name: str
+age: int
+weight: int
  
 **response:**
  
@@ -75,10 +75,10 @@ request url params:
 
 Method: GET
 EndPoint: /object_info_2
-request url params: 
- name: str
- age: int
- salary: int
+request url params:
+name: str
+age: int
+salary: int
  
 **response:**
  
@@ -105,10 +105,10 @@ request url params:
 
 Method: GET
 EndPoint: /object_info_3
-request url params: 
- name: str
- age: int
- salary: int
+request url params:
+name: str
+age: int
+salary: int
  
 **response:**
  
@@ -147,10 +147,10 @@ request url params:
 
 Method: GET
 EndPoint: /object_info_4
-request url params: 
- name: str
- age: int
- salary: int
+request url params:
+name: str
+age: int
+salary: int
  
 **response:**
  
@@ -170,10 +170,10 @@ request url params:
 
 Method: POST
 EndPoint: /user_info_2
-request form data: 
- name: str
- age: int
- salary: int
+request form data:
+name: str
+age: int
+salary: int
  
 **response:**
  
