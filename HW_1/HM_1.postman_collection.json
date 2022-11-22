@@ -1,0 +1,499 @@
+{
+	"info": {
+		"_postman_id": "01d01abd-e0d9-422d-bd79-46cc99be59b8",
+		"name": "HM_1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19350910"
+	},
+	"item": [
+		{
+			"name": "EP_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/get_method?name=Nikita&age=26",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"get_method"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Nikita"
+						},
+						{
+							"key": "age",
+							"value": "26"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var lolip = JSON.parse(responseBody);\r",
+							"var salary = parseInt (lolip.salary)\r",
+							"//let my_name = lolip.name\r",
+							"//let resp_age = lolip.age\r",
+							"//let family = lolip.family\r",
+							"//console.log(\"resp_family = \" , family)\r",
+							"//console.log(\"my_name = \" + my_name)\r",
+							"//console.log(\"resp_age = \" + resp_age)\r",
+							"\r",
+							"\r",
+							"pm.test(\"Check age\", function () {\r",
+							"    pm.expect(lolip.age).to.eql(\"26\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Check name\", function () {\r",
+							"    pm.expect(lolip.name).to.eql(\"nikita\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check salary\", function () {\r",
+							"    pm.expect(lolip.salary*4).to.eql(20000);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "nikita",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "26",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "5000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/user_info_3",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"user_info_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var lolip = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Check age\", function () {\r",
+							"    pm.expect(lolip.age).to.eql(26);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Check name\", function () {\r",
+							"    pm.expect(lolip.name).to.eql(\"Nikita\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Nikita",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "26",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "5000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_1?name=Nikita&age=26&weight=74",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Nikita"
+						},
+						{
+							"key": "age",
+							"value": "26"
+						},
+						{
+							"key": "weight",
+							"value": "74"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Nikita",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "26",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "5000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_2?name=Nikita&age=26&salary=6000",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Nikita"
+						},
+						{
+							"key": "age",
+							"value": "26"
+						},
+						{
+							"key": "salary",
+							"value": "6000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//let my_name = lolip.name\r",
+							"//let resp_age = lolip.age\r",
+							"//let family = lolip.family\r",
+							"\r",
+							"//console.log(\"resp_family = \" , family)\r",
+							"//console.log(\"my_name = \" + my_name)\r",
+							"//console.log(\"resp_age = \" + resp_age)\r",
+							"\r",
+							"\r",
+							"//pm.test(\"Check age\", function () {\r",
+							"    //pm.expect(lolip.age).to.eql(\"26\");\r",
+							"//});\r",
+							"\r",
+							"\r",
+							"//pm.test(\"Check name\", function () {\r",
+							"   // pm.expect(lolip.name).to.eql(\"Nikita\");\r",
+							"//});\r",
+							"\r",
+							"//pm.test(\"Check salary\", function () {\r",
+							"    //pm.expect(lolip.salary).to.eql(7000);\r",
+							"//});\r",
+							"\r",
+							"pm.test(\"Dog name\", function () {\r",
+							"    var jsonData = pm.response.json().family.pets.dog;\r",
+							"    pm.expect(jsonData.dog).to.include+(\"name\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Dog age\", function () {\r",
+							"    var jsonData = pm.response.json().family.pets.dog;\r",
+							"    pm.expect(jsonData.dog).to.include+(\"age\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Name Luky\", function () {\r",
+							"    var jsonData = pm.response.json().family.pets.dog;\r",
+							"    pm.expect(jsonData.name).to.eql(\"Luky\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Age =4\", function () {\r",
+							"    var jsonData = pm.response.json().family.pets.dog;\r",
+							"    pm.expect(jsonData.age).to.eql(4);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_3?name=Nikita&age=26&salary=7000",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Nikita"
+						},
+						{
+							"key": "age",
+							"value": "26"
+						},
+						{
+							"key": "salary",
+							"value": "7000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_6",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//var jsonData = pm.response.json();\r",
+							"\r",
+							"var rerol = pm.request.query.salary;\r",
+							"console.log (\"salary_from_request = \" , rerol)\r",
+							"\r",
+							"//pm.test(\"Name\", function () {\r",
+							"   // pm.expect(jsonData.name).to.eql(\"Nikita\");\r",
+							"//});\r",
+							"\r",
+							"//pm.test(\"Age\", function () {\r",
+							"   // pm.expect(jsonData.age).to.eql(26);\r",
+							"//});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_4?name=Nikita&age=26&salary=4000",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_4"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Nikita"
+						},
+						{
+							"key": "age",
+							"value": "26"
+						},
+						{
+							"key": "salary",
+							"value": "4000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_7",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Nikita",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "26",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "3000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/user_info_2",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"user_info_2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "First",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"This is the first responce from server!\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/first",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"first"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
