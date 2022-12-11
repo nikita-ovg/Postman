@@ -1,24 +1,24 @@
 # Homework_3. Postman
 
-1) Необходимо залогиниться
-POST
-http://162.55.220.72:5005/login
-login : str (кроме /)
-password : str
+1) Необходимо залогиниться  
+POST  
+http://162.55.220.72:5005/login  
+login : str (кроме /)  
+password : str  
 
-Приходящий токен необходимо передать во все остальные запросы.
+Приходящий токен необходимо передать во все остальные запросы.  
 
 ==============================================
 ### дальше все запросы требуют наличие токена.
 ==============================================
 
-2) http://162.55.220.72:5005/user_info
-req. (RAW JSON)
-POST
-age: int
-salary: int
-name: str
-auth_token
+2) http://162.55.220.72:5005/user_info  
+req. (RAW JSON)  
+POST  
+age: int  
+salary: int  
+name: str  
+auth_token  
 
 ### Responce:
 ```sh
