@@ -1,4 +1,4 @@
-Responce
+Response
 {
     "age": 25,
     "name": "Sergey",
