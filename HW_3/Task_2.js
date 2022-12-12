@@ -1,4 +1,4 @@
-Responce
+Response
 {
     "person": {
         "u_age": 27,
